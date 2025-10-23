@@ -26,8 +26,8 @@ export default function SignupPage() {
       const user = result.user;
       const email = user.email;
 
-      if (!email.endsWith('.com')) {
-        setError('Only college emails (.edu) are allowed!');
+      if (!email.endsWith('.vjti.ac.in')) {
+        setError('Only college emails (.vjti.ac.in) are allowed!');
         await auth.signOut();
         setLoading(false);
         return;
