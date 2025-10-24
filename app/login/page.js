@@ -58,7 +58,7 @@ export default function LoginPage() {
         email !== 'y.ultra.pro.super.max@gmail.com' &&
         email !== 'brucewayne305305@gmail.com'
       ) {
-          setError('Only college emails (.vjti.ac.in) or authorized emails are allowed!');
+          setError('Only college emails (.vjti.ac.in)');
           await auth.signOut();
           setLoading(false);
           return;
