@@ -29,10 +29,7 @@ export default function SignupPage() {
       
       if (
         !email.endsWith('.vjti.ac.in') &&
-        email !== 'vjtimatch@gmail.com' &&
-        email !== 'y.ultra.pro.super.max2@gmail.com' &&
-        email !== 'y.ultra.pro.super.max@gmail.com' &&
-        email !== 'brucewayne305305@gmail.com'
+        email !== 'vjtimatch@gmail.com' 
       ) {
           setError('Only college emails (.vjti.ac.in)');
           await auth.signOut();
