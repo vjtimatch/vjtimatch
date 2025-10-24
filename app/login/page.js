@@ -134,6 +134,18 @@ export default function LoginPage() {
                   )}
                 </Button>
               </Field>
+                  
+              <p className="text-xs text-center text-muted-foreground mt-2">
+              By logging in, you agree to our{' '}
+              <a 
+                href="https://termsncondition.vercel.app" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="underline hover:text-primary"
+              >
+                Terms and Conditions
+              </a>.
+              </p>
 
               <FieldDescription className="text-center text-sm">
                 Don't have an account?{' '}
