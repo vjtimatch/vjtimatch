@@ -26,11 +26,18 @@ export default function SignupPage() {
       const user = result.user;
       const email = user.email;
 
-      if (!email.endsWith('.vjti.ac.in')) {
-        setError('Only college emails (.vjti.ac.in) are allowed!');
-        await auth.signOut();
-        setLoading(false);
-        return;
+      
+      if (
+        !email.endsWith('.vjti.ac.in') &&
+        email !== 'vjtimatch@gmail.com' &&
+        email !== 'y.ultra.pro.super.max2@gmail.com' &&
+        email !== 'y.ultra.pro.super.max@gmail.com' &&
+        email !== 'brucewayne305305@gmail.com'
+      ) {
+          setError('Only college emails (.vjti.ac.in)');
+          await auth.signOut();
+          setLoading(false);
+          return;
       }
 
       const response = await fetch('/api/users', {
